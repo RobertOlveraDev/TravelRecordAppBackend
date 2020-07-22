@@ -1,7 +1,6 @@
 var table = module.exports = require('azure-mobile-apps').table();
 
 table.read(function (context) {
-    context.query.where({ IsDeleted = false });
     return context.execute();
 });
 
