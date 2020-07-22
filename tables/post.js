@@ -1,10 +1,5 @@
 var table = module.exports = require('azure-mobile-apps').table();
 
-// Defines the list of columns
-table.columns = {
-    "deleted": "boolean"
-};
-
 table.read(function (context) {
     context.query.where({ deleted: true });
     return context.execute();
